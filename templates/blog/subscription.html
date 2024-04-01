@@ -1,0 +1,10 @@
+{% extends "blog/base.html"%}
+{% block content%}
+  <h1>Subscription</h1>
+<form action="{% url 'subscription'%}" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+  <input type="submit" value="save" class="btn btn-default">
+
+</form>
+{% endblock %}
